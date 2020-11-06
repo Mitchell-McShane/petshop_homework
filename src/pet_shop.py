@@ -25,14 +25,13 @@ def increase_pets_sold(pet_shop, pets):
     pet_shop["admin"]["pets_sold"] += pets
 
 # Function for stock count in pet shop.
-
 def get_stock_count(pet_shop):
     return len(pet_shop["pets"])
 
 # Function thats gets pets by breed.
-def get_pets_by_breed(pet_shop, british_shorthair):
+def get_pets_by_breed(pet_shop, pet_breed):
     pets_number = []
     for pet in pet_shop["pets"]:
-        if pet ["breed"] == british_shorthair:
+        if pet ["breed"] == pet_breed:
             pets_number.append(pet)
     return pets_number
